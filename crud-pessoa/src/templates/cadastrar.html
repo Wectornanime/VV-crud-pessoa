@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Cadastrar Nova Pessoa</h2>
+    <form method="POST" action="{{ url_for('cadastrar_pessoa') }}">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+        </div>
+        
+        <div class="form-group">
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" name="sobrenome">
+        </div>
+        
+        <div class="form-group">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf">
+        </div>
+        
+        <div class="form-group">
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento">
+        </div>
+        
+        <button type="submit">Cadastrar</button>
+        <a href="{{ url_for('index') }}" class="btn">Cancelar</a>
+    </form>
+{% endblock %}
