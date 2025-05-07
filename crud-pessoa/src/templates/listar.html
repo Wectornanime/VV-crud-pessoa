@@ -33,6 +33,6 @@
         <p>Nenhuma pessoa cadastrada ainda.</p>
     {% endif %}
     
-    <a href="{{ url_for('listar_pessoas') }}" class="btn btn-primary">Cadastrar Nova Pessoa</a>
-    <a href=" " class="btn btn-primary">Página Inicial</a>
+    <a href="{{ url_for('cadastrar_pessoa') }}" class="btn btn-primary">Cadastrar Nova Pessoa</a>
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Página Inicial</a>
 {% endblock %}
