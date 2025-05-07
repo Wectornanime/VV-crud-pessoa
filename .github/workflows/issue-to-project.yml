@@ -7,9 +7,14 @@ on:
 jobs:
   add-to-project:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
     steps:
-      - name: Add issue to GitHub Project
-        uses: actions/add-to-project@v0.5.0
+      - name: Add issue to GitHub Project and set status
+        uses: github/add-to-project@v1
         with:
           project-url: https://github.com/users/Wectornanime/projects/1
           github-token: ${{ secrets.MY_PAT }}
+          fields: |
+            Status=Backlog
